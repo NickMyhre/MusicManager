@@ -1,0 +1,109 @@
+main {
+
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin:  2% auto;
+    padding: 5%;
+    padding-top: .5%;
+    align-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    box-shadow: -16px 40px #3c3c3c,
+        0 0  0 2px rgb(255,255,255),
+        inset 0 -3em 3em rgba(0,0,0,0.1);
+}
+.list_container {
+    width: 30%;
+    margin: auto;
+    flex-direction: row;
+    float: left;
+}
+.list-group {
+    align-self: flex-start;
+}
+.list-group-item {
+    margin-bottom: .5%;
+    box-shadow: -4px 4px gray;
+    border: 1px solid black;
+    font-style: italic;
+}
+.table_msg {
+    text-align: left;
+    font-style: oblique;
+    width: 45%;
+    background-color: #e9ecef;
+    padding: 2%;
+}
+.add_data {
+    padding: 5%;
+    border: 2px black solid;
+}
+.action-list {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 3%;
+    
+}
+.action-list li {
+    border-radius: 2%;
+    padding: .5%;
+}
+.action-list a {
+    color: whitesmoke !important;
+   
+}
+h2 {
+    text-decoration: underline;
+}
+h3 {
+    font-weight: bolder;
+    margin-top: 5%;
+}
+.no_underline {text-decoration: none !important;}
+table {
+    margin-top: 2%;
+}
+.column {
+    flex-direction: row;
+    margin-bottom: 10%;
+    width: 100%;
+    justify-content: space-between;
+}
+.navbar-nav {
+    margin-left: 3%;
+}
+form {
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+}
+.item-action {
+    width: 100%;
+    align-self: left;
+}
+.btn-col {
+    width: 15%;
+    text-align: center;
+}
+.btn {
+    margin-right: 15%;
+}
+.btn-primary {
+    margin: auto;
+}
+.add_data, .jumbotron {
+    width: 60%;
+    margin: auto;
+    margin-top: 2%;
+    justify-content: center;
+}
+.single {
+    margin: auto;
+}
+h1 {
+    border-bottom:  2px solid black;
+}
+.sort {
+    margin: 0;
+}
