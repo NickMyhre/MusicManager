@@ -176,5 +176,12 @@ class SongDB {
         $statement->execute();
         $statement->closeCursor();
     }
-
+    public static function delete_artists_song($artistID) {
+        $db = Database::getDB();
+        $query = "DELETE FROM songs
+              WHERE artistID = {$artistID}";
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $statement->closeCursor();
+    }
 }

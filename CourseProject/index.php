@@ -92,6 +92,8 @@
                         AlbumDB::delete_album($albumID);
                         if (isset($artist_deletion_list)) {
                             foreach ($artist_deletion_list as $artist) {
+                                //TODO: Create SongDB function to delete all of an artists songs so this functions properly
+                                SongDB::delete_artists_song($artist);
                                 ArtistDB::delete_artist($artist);
                             }
                         }

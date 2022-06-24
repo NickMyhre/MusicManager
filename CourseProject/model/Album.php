@@ -72,6 +72,9 @@ Class Album {
     public function setArtists($artists): void {
         $this->artists = $artists;
     }
+    public function deleteAlbum(): bool {
+        
+    }
 
     public function validate_album($albumID = '', $modifying = false) {
 

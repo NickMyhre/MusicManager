@@ -2,19 +2,16 @@
 
 //initialize arrays
 
-$artist_list = array();
 $artist_deletion_list = array();
 
 //list each artist in album
-foreach ($album_artists->getArtists() as $artist) {
-    $artist_list[] = $artist->getArtistID();
-}
+
+$artist_list = $album_artists->getArtistIDs();
 //see if number of songs that artist has in album is the same as the number of all their songs
 foreach ($artist_list as $id) {
     $total_artist_songs = count(SongDB::get_artists_songs($id)->getSongs());
     $album_artist_songs = SongDB::get_num_of_songs_on_album_from_particular_artist($albumID, $id);
-    if ($total_artist_songs == $album_artist_songs) {
-        
+    if ((int)$total_artist_songs === (int)$album_artist_songs) {
         //add artist to deletion list if true
         $artist_deletion_list[] = $id;
     }
