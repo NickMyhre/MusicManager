@@ -14,8 +14,7 @@
 
   <dt class="col-sm-3">Release Date</dt>
   
-  <!-- slice time value off datetime -->
-  <dd class="col-sm-9"><?php echo substr($album->getReleaseDate(),0, 10) ; ?></dd>
+  <dd class="col-sm-9"><?php echo $album->getFormattedRelDate() ; ?></dd>
 
   <dt class="col-sm-3 text-truncate">Neat Factoid</dt>
   <dd class="col-sm-9"><?php echo $album->getFact() ; ?></dd>

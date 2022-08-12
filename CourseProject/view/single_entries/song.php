@@ -19,7 +19,7 @@
         <dt class="col-sm-3">Billboard Rank Date</dt>
         
         <!-- slice time value off datetime -->
-        <dd class="col-sm-9"><?php echo substr($song->getbbDate(), 0, 10); ?></dd>
+        <dd class="col-sm-9"><?php echo $song->getFormattedbbDate(); ?></dd>
 
         <dt class="col-sm-3">Comments</dt>
         <dd class="col-sm-9">

@@ -1,29 +1,9 @@
 <?php
 
-
-//gets multiple artist strings
-function artist_string($rows) {
-    $string ='';
-    foreach ($rows as $artist) {
-        $string .= $artist['birthName'] . "\n";
-    }
-    return $string;
-}
-
 //formats minutes and seconds into valid data format
 function song_string ($minutes, $seconds) {
     return "00:" . trim($minutes) . ":". trim($seconds);
 }
-
-function get_minutes($string) {
-    $index = strpos($string, ':', 3) - 3;
-    return (int) trim(substr($string, 3, $index));
-}
-function get_seconds($string) {
-    $index = strrpos($string, ':') + 1;
-    return (int)substr($string, $index);
-}
-
 //returns null if string is empty
 function isNull($string) {
     if (empty($string) || $string === false) {

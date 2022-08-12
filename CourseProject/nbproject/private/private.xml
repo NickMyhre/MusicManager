@@ -5,13 +5,23 @@
         <group>
             <file>file:/C:/xampp/htdocs/CourseProject/model/AlbumList.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/controllers/del_album_controller.php</file>
-            <file>file:/C:/xampp/htdocs/CourseProject/model/Artist.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/view/single_entries/album.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/model/SongList.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/view/tables/all_songs.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/model/ArtistDB.php</file>
-            <file>file:/C:/xampp/htdocs/CourseProject/model/ArtistList.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/view/modify_forms/modify_album.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/model/Song.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/model/SongDB.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/model/general_functions.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/model/Artist.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/view/single_entries/artist.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/view/modify_forms/modify_song.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/model/ArtistList.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/model/Album.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/model/AlbumDB.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/view/single_entries/song.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/index.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/view/modify_forms/modify_artist.php</file>
         </group>
     </open-files>
 </project-private>

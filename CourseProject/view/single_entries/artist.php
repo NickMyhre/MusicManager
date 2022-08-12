@@ -20,7 +20,7 @@
     <dt class="col-sm-3">Birth Date</dt>
     
     <!-- slice time value off datetime -->
-    <dd class="col-sm-9"><?php echo substr($artist->getBirthDate(), 0, 10); ?></dd>
+    <dd class="col-sm-9"><?php echo $artist->getFormattedBirthDate(); ?></dd>
 
     <dt class="col-sm-3 text-truncate">Death Date</dt>
     <dd class="col-sm-9">
@@ -28,7 +28,7 @@
         if (empty($artist->getDeathDate())) {
             $string = 'Still Alive. (probably)';
         } else {
-            $string = substr($artist->getDeathDate(), 0, 10);
+            $string = $artist->getFormattedDeathDate();
         }
         echo $string
         ?></dd>

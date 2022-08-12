@@ -61,7 +61,6 @@
                         $order = filter_input(INPUT_POST, 'order', FILTER_SANITIZE_STRING);
                         $album = AlbumDB::get_album_info($albumID);
                         $album_artists = AlbumDB::get_album_artists($albumID);
-                        $artist_string = artist_string($album_artists);
                         if (empty($order)) {
                             $result = SongDB::get_albums_songs($albumID);
                         } else {
@@ -92,6 +91,8 @@
                         AlbumDB::delete_album($albumID);
                         if (isset($artist_deletion_list)) {
                             foreach ($artist_deletion_list as $artist) {
+                                //TODO: Create SongDB function to delete all of an artists songs so this functions properly
+                                SongDB::delete_artists_song($artist);
                                 ArtistDB::delete_artist($artist);
                             }
                         }
@@ -165,40 +166,25 @@
                         
                         $albumID = filter_input(INPUT_POST, 'rowID', FILTER_VALIDATE_INT);
                         $album = AlbumDB::get_album_info($albumID);
-                        $title = filter_input(INPUT_POST, 'title');
-                        $artists = filter_input(INPUT_POST, 'artists', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
-                        $genre = filter_input(INPUT_POST, 'genre');
-                        $label = filter_input(INPUT_POST, 'label');
-                        $release_date = filter_input(INPUT_POST, 'release_date');
-                        $fact = filter_input(INPUT_POST, 'fact');
+                        $result = ArtistDB::get_artist_page();
+                        $artists = $album->getAlbumArtistIDs();
                         break;
 
                     case 'modify_artist_page':
                         $url = './view/modify_forms/modify_artist.php';
 
                         $artistID = filter_input(INPUT_POST, 'rowID', FILTER_VALIDATE_INT);
-                        $stage_name = filter_input(INPUT_POST, 'stage_name');
-                        $birth_name = filter_input(INPUT_POST, 'birth_name');
-                        $hometown = filter_input(INPUT_POST, 'hometown');
-                        $birth_date = filter_input(INPUT_POST, 'birth_date');
-                        $death_date = filter_input(INPUT_POST, 'death_date');
-                        $fact = filter_input(INPUT_POST, 'fact');
+                        $artist = ArtistDB::get_artist_info($artistID);
                         break;
 
                     case 'modify_song_page':
                         $url = './view/modify_forms/modify_song.php';
-
+                        $result = ArtistDB::get_artist_page();
                         $songID = filter_input(INPUT_POST, 'rowID', FILTER_VALIDATE_INT);
-                        $albumID = filter_input(INPUT_POST, 'albumID', FILTER_VALIDATE_INT);
-                        $song_name = filter_input(INPUT_POST, 'song_name');
-                        $artists = filter_input(INPUT_POST, 'artists', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
-                        $album_name = filter_input(INPUT_POST, 'album_name');
-                        $comments = filter_input(INPUT_POST, 'comments');
-                        $length = filter_input(INPUT_POST, 'length');
-                        $bb_ranking = filter_input(INPUT_POST, 'bb_ranking');
-                        $song_artist = filter_input(INPUT_POST, 'song_artist');
-                        $rank_date = filter_input(INPUT_POST, 'rank_date');
-                        $writer = filter_input(INPUT_POST, 'writer');
+                        $song = SongDB::get_song_info($songID);
+                        $albums = AlbumDB::get_albums();
+                        $albumID = (int)$song->getAlbumID();
+                        $artists = $song->getSongArtistIDs();
                         break;
 
                     

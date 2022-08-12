@@ -72,6 +72,9 @@ Class Song {
         return $this->bbRank;
     }
     
+    public function getFormattedbbDate() {
+        return trim(substr($this->bbDate, 0, 10));
+    }
     public function setComments($value) {
         $this->comments = $value;
     }
@@ -88,13 +91,18 @@ Class Song {
         return $this->albumID;
     }
     
-    public function getMinutes($length) {
-        $index = strpos($length, ':', 3) - 3;
-        return (int) trim(substr($length, 3, $index));
+    public function getMinutes() {
+        $index = strpos($this->length, ':', 3) - 3;
+        return ((int)trim(substr($this->length, 3, $index)));
     }
     
-    public function getSeconds($length) {
-        $index = strrpos($length, ':') + 1;
-        return (int)substr($length, $index);
+    public function getSeconds() {
+        $index = strrpos($this->length, ':') + 1;
+        return ((int)substr($this->length, $index));
+    }
+    
+    public function getSongArtistIDs() {
+        $artists = SongDB::get_song_artists($this->songID);
+        return $artists->getArtistIDs();
     }
 }

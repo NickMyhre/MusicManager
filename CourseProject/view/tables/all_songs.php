@@ -24,7 +24,6 @@
                     <form action="." method="post">
                         <input type="submit" value="View" class="item-action">
                         <input type="hidden" value="<?php echo $song->getID(); ?> " name="songID">
-                        <input type="hidden" value="<?php echo $song->getAlbumID(); ?> " name="albumID" >
                         <input type="hidden" value="view_song" name="action" >
                     </form>
                     
@@ -32,22 +31,6 @@
                     <form action="." method="post">
                         <input type="submit" value="Modify" class="item-action">
                         <input type="hidden" value="<?php echo $song->getID(); ?> " name="rowID">
-                        <input type="hidden" value="<?php echo $song->getAlbumId(); ?> " name="albumID" >
-                        <input type="hidden" value="<?php echo $song->getAlbum(); ?> " name="album_name" >
-                        <?php
-                        $date = substr($song->getbbDate(), 0, 10);
-                        $artists = SongDB::get_song_artists($song->getID());
-                        foreach ($artists->getArtistIDs() as $artist) {
-                            ?>
-                            <input type="hidden" value="<?php echo $artist; ?> " name="artists[]" >
-                        <?php } ?>
-                        <input type="hidden" value="<?php echo $song->getName(); ?> " name="song_name" >
-                        <input type="hidden" value="<?php echo $song->getAlbumId(); ?> " name="albumID" >
-                        <input type="hidden" value="<?php echo $song->getbbRank(); ?> " name="bb_ranking" >
-                        <input type="hidden" value="<?php echo $song->getLength(); ?> " name="length" >
-                        <input type="hidden" value="<?php echo $song->getComments(); ?> " name="comments" >
-                        <input type="hidden" value="<?php echo $song->getWriter(); ?> " name="writer" >
-                        <input type="hidden" value="<?php echo trim($song->getbbDate()); ?> " name="rank_date" >
                         <input type="hidden" value="modify_song_page" name="action" >
                     </form>
                     

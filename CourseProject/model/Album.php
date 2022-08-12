@@ -44,6 +44,14 @@ Class Album {
     public function getArtists() {
         return $this->artists;
     }
+    
+    public function getArtistIDs() {
+        $artistIDs = array();
+        foreach ($this->artists->getArtistID() as $artist){
+            $artistIDs[] = $artist;
+        }
+        return $artistIDs;
+    }
 
     public function setAlbumID($albumID): void {
         $this->albumID = $albumID;
@@ -71,6 +79,12 @@ Class Album {
 
     public function setArtists($artists): void {
         $this->artists = $artists;
+    }
+    
+    
+    public function getAlbumArtistIDs() {
+        $artists = AlbumDB::get_album_artists($this->albumID);
+        return $artists->getArtistIDs();
     }
 
     public function validate_album($albumID = '', $modifying = false) {

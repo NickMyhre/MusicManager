@@ -9,13 +9,12 @@
         </div>
         <div class="form-group">  
             <label>Album Artist</label>
-            <?php $result = ArtistDB::get_artist_page(); ?>
+            <?php  ?>
             <select class="form-control" name='artists[]' multiple size="2" required>                    
                 <?php foreach ($result->getArtists() as $artist) { 
                     // set artist value and select the artists from previous entry if modifying
                     ?>
-                <!-- TODO AlbumDB:get_album_artists needs to be an array of artist ID's for the in_array function to work -->
-                <option value="<?php echo $artist->getArtistID(); ?>" <?php if ( in_array((int)$artist->getArtistID(), AlbumDB::get_album_artists($album->getAlbumID()))) { ?> selected <?php } ?>>
+                <option value="<?php echo $artist->getArtistID(); ?>" <?php if ( in_array((int)$artist->getArtistID(), $artists)) { ?> selected <?php } ?>>
                     <?php echo $artist->getBirthName(); ?>
                 </option>            
                 <?php } ?>
