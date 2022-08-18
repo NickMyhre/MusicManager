@@ -80,7 +80,7 @@
                         $album_artists = AlbumDB::get_album_artists($albumID);
                         include './view/tables/table_headers/confirmation_header.php';
                         include('./view/tables/all_songs.php');
-                        $url = './controllers/del_album_controller.php';
+                        $url = './misc(needs to be refactored)/del_album.php';
                         break;
 
                     

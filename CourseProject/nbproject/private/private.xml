@@ -4,7 +4,6 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/CourseProject/model/AlbumList.php</file>
-            <file>file:/C:/xampp/htdocs/CourseProject/controllers/del_album_controller.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/view/single_entries/album.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/model/SongList.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/view/tables/all_songs.php</file>
@@ -17,6 +16,7 @@
             <file>file:/C:/xampp/htdocs/CourseProject/view/single_entries/artist.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/view/modify_forms/modify_song.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/model/ArtistList.php</file>
+            <file>file:/C:/xampp/htdocs/CourseProject/misc(needs%20to%20be%20refactored)/del_album.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/model/Album.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/model/AlbumDB.php</file>
             <file>file:/C:/xampp/htdocs/CourseProject/view/single_entries/song.php</file>
