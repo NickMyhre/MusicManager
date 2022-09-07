@@ -11,3 +11,4 @@ The database consists of 5 tables. 3 of which are for the entities and the other
 Technologies and lanugages used in this application include HTML, CSS, PHP, BootStrap, MySQL, and Apache web server. The environment was largely set up via XAMPP.
 
 If you'd like to see what the application looks like screenshots are posted in the "Screenshots" directory.
+The "project.sql" in the SQL folder can also be used to build the database used by this project.
